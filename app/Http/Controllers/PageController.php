@@ -9,7 +9,7 @@ class PageController extends Controller
 {
     public function posts(){
         return view('posts',[
-            'posts' => Post::load('users')->latest()->paginate()
+            'posts' => Post::load('user')->latest()->paginate()
         ]);
     }
 
